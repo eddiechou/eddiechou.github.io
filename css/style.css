@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    color: orange;
+    font-size: 12px;
+    background-color: black;
+}
+
+h1 {
+    font-size: 32px;
+    color: green;
+}
+
+h3 {
+    font-size: 28px;
+    color: green;
+}
+
+h4 {
+    font-size: 18px;
+    color: green;
+}
