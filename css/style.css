@@ -3,6 +3,18 @@ body {
     color: orange;
     font-size: 12px;
     background-color: black;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.text-thin {
+    font-weight: 300;
+}
+
+.title-super {
+    font-size: 48px;
+    margin-bottom:20px;
 }
 
 h1 {
@@ -18,4 +30,25 @@ h3 {
 h4 {
     font-size: 18px;
     color: green;
+}
+
+.button{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.large-btn {
+    font-size:18px;
+    width: 130px;
+    height: 30px;
+}
+
+.medium-btn {
+    font-size:16px;
+    width: 100px;
+    height: 30px;
+}
+
+.modal-title {
+    font-size:36px;
 }

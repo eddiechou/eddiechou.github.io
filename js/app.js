@@ -277,10 +277,10 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
-$(".level35").click(function(){
-    while(game.level < 35){
+function level(requestedLevel) {
+    while(game.level < requestedLevel){
         game.nextLevel();
     }
     var score = document.getElementById('score');
     score.innerHTML = "Level: " + game.level + " | Score: " + game.score;
-});
+}

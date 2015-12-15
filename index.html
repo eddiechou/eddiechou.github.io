@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BUGGER!</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
@@ -14,15 +15,23 @@
 </head>
 
 <body>
-    <h1>BUGGER!</h1>
-    <div>
-        <button type="button" class="btn" data-toggle="modal" data-target="#instructions">Instructions
+    <h1 class="title-super">Bugger!</h1>
+    <div class="container">
+    <div class="row">
+        <button type="button" class="button large-btn" data-toggle="modal" data-target="#instructions">Instructions
         </button>
     </div>
-    <div>
-        <button onclick="level35()"type="button" class="btn level35">Level 35
-        </button>
+</div>
+<div class="container">
+    <div class="row">
+        <h4>Difficulty Selection</h4>
     </div>
+    <div class="row">
+        <button onclick="level(10)" type="button" class="button medium-btn">Meh</button>
+        <button onclick="level(20)" type="button" class="button medium-btn">Annoying</button>
+        <button onclick="level(30)" type="button" class="button medium-btn">PLAGUUU!!</button>
+    </div>
+</div>
 
     <!-- Modal for Instructions -->
     <div class="modal fade text-center" id="instructions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
@@ -32,9 +41,10 @@
                     <h4 class="modal-title text-dark" id="myModalLabel1">Bugger! Instructions</h4>
                 </div>
                 <div class="modal-body">
-                    <p>Reach the river to get points.</p>
-                    <p>Get 3 points to get to the next level!</p>
-                    <p>Walk over a character to switch models!</p>
+                    <h3>Use the arrow keys to move in half-square increments.</h3>
+                    <h3>Reach the river to get 1 point.</h3>
+                    <h3>Get 3 points to get to the next level.</h3>
+                    <h3>Try switching models by walking over another character!</h3>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -46,13 +56,7 @@
     <script src="js/app.js"></script>
     <script src="js/engine.js"></script>
     <script>
-        function level35() {
-            while(game.level < 35){
-                game.nextLevel();
-            }
-            var score = document.getElementById('score');
-            score.innerHTML = "Level: " + game.level + " | Score: " + game.score;
-        }
+
     </script>
     <h3 id="score">Level: 1 | Score: 0</h3>
     <h4 id="score-note"></h4>
