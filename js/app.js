@@ -119,7 +119,7 @@ Player.prototype.handleInput = function(key){
 
     /* Checks if move results in out-of-bounds */
     if (!this.legalMove(key)){
-        notes.innerHTML = 'Illegal move.';
+        notes.innerHTML = 'Out of Bounds.';
         notes.style.color = 'red';
         return;
     } else {
