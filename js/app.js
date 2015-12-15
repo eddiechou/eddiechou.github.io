@@ -47,7 +47,8 @@ Enemy.prototype.update = function(dt) {
         }
         score.innerHTML = 'Level: ' + game.level + ' | Score: ' + game.score;
         notes.style.color = 'red';
-        setTimeout(player.reset(), 3000);
+        player.reset();
+        setTimeout(function(){}, 3000);
         return;
     }
 
