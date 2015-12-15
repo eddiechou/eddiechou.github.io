@@ -75,7 +75,7 @@ Enemy.prototype.render = function() {
  */
 var Player = function() {
     this.x = 303;
-    this.y = 382;
+    this.y = 340.5;
     this.key = null;
 
     /* How much the player moves per key input in each direction */
@@ -174,7 +174,7 @@ Player.prototype.riverTouch = function(key){
  */
 Player.prototype.reset = function(){
     this.x = 303;
-    this.y = 382;
+    this.y = 340.5;
 };
 
 /**
