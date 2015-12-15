@@ -16,11 +16,11 @@
 <body>
     <h1>BUGGER!</h1>
     <div>
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#instructions">INSTRUCTIONS
+        <button type="button" class="btn" data-toggle="modal" data-target="#instructions">INSTRUCTIONS
         </button>
     </div>
     <div>
-        <button type="button" class="btn btn-primary btn-lg level35">Level 35
+        <button onclick="level35()"type="button" class="btn level35">Level 35
         </button>
     </div>
 
@@ -45,6 +45,15 @@
     <script src="js/resources.js"></script>
     <script src="js/app.js"></script>
     <script src="js/engine.js"></script>
+    <script>
+        function level35() {
+            while(game.level < 35){
+                game.nextLevel();
+            }
+            var score = document.getElementById('score');
+            score.innerHTML = "Level: " + game.level + " | Score: " + game.score;
+        }
+    </script>
     <h3 id="score">Level: 1 | Score: 0</h3>
     <h4 id="score-note"></h4>
 </body>
