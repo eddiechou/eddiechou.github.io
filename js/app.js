@@ -79,8 +79,8 @@ var Player = function() {
     this.key = null;
 
     /* How much the player moves per key input in each direction */
-    this.moveY = 41.5;
-    this.moveX = 50.5;
+    this.moveY = 83;
+    this.moveX = 101;
     this.sprite = 'images/char-boy.png';
 };
 
