@@ -195,6 +195,12 @@ Game.prototype.nextLevel = function(){
     allEnemies[this.level+1] = new Enemy(Math.floor((Math.random()*3)), Math.floor((Math.random()*3)));
 };
 
+Game.prototype.prevLevel = function(){
+    this.level--;
+    this.score = 0;
+    allEnemies.pop();
+}
+
 /**
  * @description Method to adjust the score
  * @param {number} value - The value to adjust the score by
@@ -278,8 +284,14 @@ document.addEventListener('keyup', function(e) {
 });
 
 function level(requestedLevel) {
-    while(game.level < requestedLevel){
-        game.nextLevel();
+    if(game.level < requestedLevel){
+        while(game.level < requestedLevel){
+            game.nextLevel();
+        }
+    } else {
+        while(game.level > requestedLevel){
+            game.prevLevel();
+        }
     }
     var score = document.getElementById('score');
     score.innerHTML = "Level: " + game.level + " | Score: " + game.score;
