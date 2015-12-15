@@ -39,9 +39,13 @@ Enemy.prototype.update = function(dt) {
         /* Subtract score, display notes, and reset player */
         var score = document.getElementById("score");
         var notes = document.getElementById("score-note");
-        game.addScore(-1);
+        if(game.score > 0){
+            game.addScore(-1);
+            notes.innerHTML = 'You\'ve been hit! -1 point!';
+        } else {
+            notes.innerHTML = 'You\'ve been hit!';
+        }
         score.innerHTML = 'Level: ' + game.level + ' | Score: ' + game.score;
-        notes.innerHTML = 'You\'ve been hit! -1 point!';
         notes.style.color = 'red';
         player.reset();
         return;
