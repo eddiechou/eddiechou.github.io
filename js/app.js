@@ -293,6 +293,7 @@ function level(requestedLevel) {
             game.prevLevel();
         }
     }
+    player.reset();
     var score = document.getElementById('score');
     score.innerHTML = "Level: " + game.level + " | Score: " + game.score;
 }
