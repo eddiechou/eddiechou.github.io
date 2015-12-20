@@ -424,7 +424,7 @@ var resizePizzas = function(size) {
 
   changeSliderLabel(size);
 
-    // TODO: change to 3 sizes? no more xl?
+
     // Changes the slider value to a percent width
     function sizeSwitcher (size) {
       switch(size) {
@@ -441,11 +441,10 @@ var resizePizzas = function(size) {
 
 
   // Iterates through pizza elements on the page and changes their widths
-
-  // Fixed: Took some calculations that only needed to be performed once
-  //      outside of the for loop
+  // Fixed: Took querySelectorAll calculation that only needed to be performed once
+  // outside of the for loop
   function changePizzaSizes(size) {
-    
+    var newWidth;
     switch(size){
       case "1":
         newWidth = 25;
@@ -512,7 +511,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
+  var items = document.getElementsByClassName('mover');
   var vertPosition = document.body.scrollTop / 1250;
 
   for (var i = 0; i < items.length; i++) {
@@ -538,7 +537,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
   var movingPizzas = document.querySelector("#movingPizzas1");
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 40; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
