@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Neighborhood Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div id="content">
+        <div id="map"></div>
+    </div>
+    <div id="top-left">
+        <div>
+            <button type="button" class="w3-opennav w3-large" id="toggle-button">&#9776;</button>
+        </div>
+        <div class="w3-animate-opacity" id="sidebar">
+            <div class="sidebar-inside">
+                <div class="w3-container" id="sidebar-title-container">
+                    <h3 class="w3-center" id="sidebar-title">Museums in London</h3>
+                </div>
+
+                <div class="w3-container">
+                    <ul class="w3-ul w3-large w3-hoverable w3-center" data-bind="foreach: displayedMarkers">
+                        <li class="w3-padding-16" data-bind="text: title, click: $parent.clickMarker">
+                    </ul>
+                </div>
+
+                <form class="w3-container" id="sidebar-filter">
+                    <input class="w3-input" placeholder="Filter locations by name" type="text"
+                        data-bind="textInput: filter, event: { 'keyup': filterMarkers }"></input>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/lib/jquery-2.2.4.min.js"></script>
+    <script src="js/lib/knockout-3.2.0.js"></script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDa2gdG2HkgOwVNbYbFzb1BG7XcvN8LZ28&libraries=places&callback=mapSuccess" onerror="mapError()"></script>
+
+    <script src="js/lib/info-bubble/src/infobubble.js"></script>
+    <script src="js/appl.js"></script>
+</body>
+</html>
