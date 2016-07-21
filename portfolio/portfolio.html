@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Portfolio</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<div class="row">
+					<div class="col-md-6">
+						<img src="images/udacity_logo.svg" alt="Udacity logo"
+						 width="120" height="120">
+					</div>
+					<div class="col-md-6 text-right text-uppercase">
+						<h1 class="title-super text-thin">Eddie Chou</h1>
+						<h4>Front-End Web Developer</h4>
+					</div>
+				</div>
+				<div class="row hr-header">
+					<div class="col-md-12">
+						<hr>
+					</div>
+				</div>
+				<nav>
+					<div class="row text-nav text-center">
+						<div class="col-md-12">
+							<a href="#">Home</a> |
+							<a href="#">About</a> |
+							<a href="#">Resume</a> |
+							<a href="#">Contact</a>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<main>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<img class="img-responsive img-thumbnail lazyload" srcset="images/main360x240.jpg 360w, images/main.jpg 1180w" data-sizes="auto" sizes="(max-width:980px) 360px, 1100vw" src="images/main.jpg" alt="Main picture">
+					</div>
+				</div>
+				<div class="row featured-title">
+					<div class="col-md-12">
+						<h2 class="text-muted text-center">Featured Work</h2>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-md-4">
+						<img class="img-responsive img-thumbnail" src="images/frogger.png" data-toggle="modal" data-target="#project1" alt="frogger picture">
+						<h3 class="text-uppercase text-dark">Arcade Game</h3>
+						<p>http://github.com/arcade_game</p>
+					</div>
+					<div class="col-md-4">
+						<img class="img-responsive img-thumbnail" src="images/health.jpg" data-toggle="modal" data-target="#project2" alt="health picture">
+						<h3 class="text-uppercase text-dark">Health Tracker</h3>
+						<p>http://github.com/health_tracker</p>
+					</div>
+					<div class="col-md-4">
+						<img class="img-responsive img-thumbnail" src="images/neighborhood.jpg" data-toggle="modal" data-target="#project3" alt="neighborhood picture">
+						<h3 class="text-uppercase text-dark">Neighborhood Map</h3>
+						<p>http://github.com/neighborhood_map</p>
+					</div>
+				</div>
+			</main>
+			<footer>
+				<div class="row hr-footer">
+					<div class="col-md-12">
+						<hr>
+					</div>
+					<div class="col-md-12 text-center">
+						© 2015 Eddie Chou — All rights reserved.
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<!-- Modal for project1 -->
+		<div class="modal fade text-center" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title text-dark" id="myModalLabel1">Arcade Game</h4>
+					</div>
+					<div class="modal-body">
+						<img class="img-responsive img-rounded center-block image-modal" src="images/frogger.png" alt="frogger picture">
+						A re-creation of the classic arcade game Frogger!
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for project2 -->
+		<div class="modal fade text-center" id="project2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title text-dark" id="myModalLabel2">Health Tracker</h4>
+					</div>
+					<div class="modal-body">
+						<img class="img-responsive img-rounded center-block image-modal" src="images/health.jpg" alt="health picture">
+						Used Backbone to develop a single page app that tracks a user's calorie intake, and optionally, other health-related metrics. Typing food names into the search field will display a list of matching foods as provided by the health API. Users are able to select an item from the list, and the item will be added to the list of foods the user is tracking. There is a total calorie count that automatically updates based on the selected foods.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for project3 -->
+		<div class="modal fade text-center" id="project3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title text-dark" id="myModalLabel3">Neighborhood Map</h4>
+					</div>
+					<div class="modal-body">
+						<img class="img-responsive img-rounded center-block image-modal" src="images/neighborhood.jpg" alt="neighborhood picture">
+						A single-page application featuring a neighborhood map. There are map markers to identify popular locations or places you'd like to visit, a search function to easily discover these locations, and a listview to support simple browsing of all locations. Used third-party APIs like StreetView images, Wikipedia articles, and Yelp Reviews to provide additional information.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

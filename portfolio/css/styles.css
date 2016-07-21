@@ -1,0 +1,50 @@
+body {
+	font-family: 'Lato', sans-serif;
+	color: #774;
+	font-weight: 400;
+	margin-top: 10px;
+}
+
+.text-muted {
+	font-weight: 400;
+	color: #999;
+}
+
+.text-thin {
+	font-weight: 300;
+}
+
+.text-dark {
+	font-weight: 700;
+	color: #747704;
+}
+
+.title-super {
+	font-size: 48px;
+	margin-bottom:0;
+}
+
+hr {
+	border: 4px solid #BCBBBB;
+	margin-top: 0;
+}
+
+.hr-header {
+	margin-bottom: 0px;
+}
+
+.hr-footer {
+	margin-top: 20px;
+}
+
+.featured-title {
+	margin: 15px 0 10px;
+}
+
+.text-nav {
+	font-size: 18px;
+}
+
+.image-modal {
+	margin-bottom: 20px;
+}
