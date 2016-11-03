@@ -4,14 +4,14 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 	  concat: {
 	    js: {
-	      src: ['js/main.js'],
+	      src: ['js/jquery.js', 'js/boostrap.min.js', 'js/jquery.easing.min.js', 'js/scrolling-nav.js'],
 	      dest: 'build/js/scripts.js',
 	    },
 	    css: {
-	      src: ['css/main.css', 'css/theme.css'],
+	      src: ['css/bootstrap.css', 'css/scrolling-nav.css'],
 	      dest: 'build/css/styles.css',
 	    },
-	  },
+	  },    
 	  watch: {
 	    js: {
 	      files: ['js/**/*.js'],
