@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 	      dest: 'build/js/scripts.js',
 	    },
 	    css: {
-	      src: ['css/bootstrap.css', 'css/scrolling-nav.css'],
+	      src: ['css/bootstrap.min.css', 'css/scrolling-nav.css'],
 	      dest: 'build/css/styles.css',
 	    },
 	  },    
